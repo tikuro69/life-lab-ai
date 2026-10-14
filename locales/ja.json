@@ -1,0 +1,20 @@
+{
+  "punctuation": "。.!！",
+  "polite_suffix": "(?:してください|して下さい|して|ください|下さい)?",
+  "clear_expression": "(?:クリア|全消去|全部消す|全部消して|盤面をクリア|盤面を消して)",
+  "random_expression": "(?:ランダム|ランダム配置|ランダムに配置|ランダムにして)",
+  "start_expression": "(?:開始|再生|スタート)",
+  "stop_expression": "(?:停止|ストップ|止めて)",
+  "step_expression": "(\\d+)世代(?:進める|進めて|進め)",
+  "pattern_expression": "(?:(中央|左上|右上|左下|右下)に)?(グライダー|ブリンカー|ブロック)",
+  "placement_suffix": "(?:を)?(?:置いて|置く|配置|配置して)?",
+  "glider": "グライダー",
+  "blinker": "ブリンカー",
+  "block": "ブロック",
+  "top_left": "左上",
+  "top_right": "右上",
+  "bottom_left": "左下",
+  "bottom_right": "右下",
+  "cell_expression": "(\\d+)行(?:目)?[、,\\s]*(\\d+)列(?:目)?(?:を)?(生存|死亡)(?:にする|にして)?",
+  "alive": "生存"
+}

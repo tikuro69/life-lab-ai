@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conway's Game of Life</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main>
+    <h1>Conway's Game of Life</h1>
+    <p>A 20×20 Game of Life. Click cells while paused to create your starting pattern.</p>
+    <div class="controls">
+      <button id="toggle">Start</button>
+      <button id="step">Step</button>
+      <button id="random">Randomize</button>
+      <button id="clear">Clear</button>
+    </div>
+    <form id="command-form" class="command-form">
+      <label for="instruction">Natural-language commands</label>
+      <div class="command-input">
+        <input id="instruction" name="instruction" maxlength="500" required placeholder="Place a glider in the center" autocomplete="off">
+        <button id="command-submit" type="submit">Execute</button>
+      </div>
+      <p class="note">Examples: place a glider in the center / advance 10 generations / stop / clear</p>
+      <p class="note">{% if ai_enabled %}AI interpretation enabled. Only instructions not recognized locally are sent to OpenAI.{% else %}AI interpretation disabled. Built-in commands work without an API key.{% endif %}</p>
+    </form>
+    <p id="command-result" role="status" aria-live="polite"></p>
+    <p>Generation: <span id="generation">0</span> / Live cells: <span id="population">0</span></p>
+    <div id="board" class="board" style="--size: {{ size }}" aria-label="Game of Life board"></div>
+    <p id="error" role="alert"></p>
+    <p class="note">Live cells survive with 2 or 3 live neighbors. Dead cells are born with exactly 3. Cells outside the board are dead.</p>
+  </main>
+  <script src="{{ url_for('static', filename='game.js') }}" defer></script>
+</body>
+</html>

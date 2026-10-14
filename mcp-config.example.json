@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "life-lab": {
+      "command": "/absolute/path/to/life-lab-ai/.venv/bin/python",
+      "args": ["/absolute/path/to/life-lab-ai/mcp_server.py"],
+      "env": {
+        "LIFE_APP_URL": "http://127.0.0.1:5000"
+      }
+    }
+  }
+}

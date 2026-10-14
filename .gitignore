@@ -1,0 +1,25 @@
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+mcp-config.local.json
+*.pem
+*.key
+
+# Editor / OS / runtime files
+.DS_Store
+.idea/
+.vscode/
+*.log
